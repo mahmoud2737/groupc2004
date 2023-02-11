@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيكشن ج</title>
+    <style>
+* {
+
+    margin: 0;
+
+    color: #fff;
+
+    font-family: system-ui;
+
+    text-align: center;
+
+}
+
+body {
+
+    width: 100%;
+
+    background: linear-gradient(to right, #00718b , #8d006e);
+
+}
+
+.container {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+.list {
+
+    width: 270px;
+
+    height: 50px;
+
+    box-shadow: 0px 0px 17px -5px #000;
+
+    margin: 26px;
+
+    border-radius: 22px;
+
+    display: flex;
+
+    overflow: hidden;
+
+    justify-content: space-evenly;
+
+    align-items: center;
+
+    padding: 0;
+
+}
+
+.p1 {
+
+    width: 125px;
+
+    height: 60px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    margin: 0;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+ul#type {
+
+    display: none;
+
+}
+
+h1 {
+
+    margin: 0;
+
+    font-size: 20px;
+
+}
+
+.main {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding: 0;
+
+    display: none;
+
+    flex-direction: column;
+
+    margin-left: 8px;
+
+}
+
+#pp {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row-reverse;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    margin-bottom: 19px;
+
+}
+
+h2 {
+
+    margin-bottom: 25px;
+
+    display: none;
+
+}
+
+.t {
+
+    width: 1068px;
+
+    border: 1px solid;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: nowrap;
+
+    justify-content: flex-end;
+
+    margin: 0px 18px;
+
+}
+
+ul.ud {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 0%;
+
+}
+
+ul {
+
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-wrap: nowrap;
+
+    flex-direction: row-reverse;
+
+    padding: 0%;
+
+}
+
+li#day {
+
+    width: 65px;
+
+    border-left: 1px solid;
+
+    height: 102px;
+
+    text-align: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+li {
+
+    height: 100px;
+
+    overflow: hidden;
+
+    border: 1px solid;
+
+    width: 265px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+}
+
+span {
+
+    background: #2c2c2c8a;
+
+    width: 50%;
+
+    height: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+}
+
+h4 {
+
+    width: 100%;
+
+    height: 23px;
+
+    margin-top: 2px;
+
+    background: black;
+
+}
+
+.listt {
+
+    display: none;
+
+}
+
+div#listt {
+
+    width: 100%;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-content: flex-end;
+
+    align-items: flex-end;
+
+    margin-right: 40px;
+
+    height: 45vh;
+
+}
+
+a.er {
+
+    width: 80%;
+
+    margin-bottom: 40px;
+
+    height: 40px;
+
+    background: #000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;    
+
+    text-decoration-line: none;
+
+}
+
+.header {
+
+    width: 96%;
+
+    height: 70px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: 0px 0px 29px -19px;
+
+    border-radius: 12px;
+
+    padding: 0 2%;
+
+}
+
+img {
+
+    height: 60px;
+
+}
+
+.part {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    width: 147px;
+
+}
+
+h6 {
+
+    text-align: end;
+
+}
+
+.footer {
+
+    width: 100%;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-top: 1px solid;
+
+}
+
+
+</style>
+    <script>
+localStorage.setItem("key","0")
+
+function start(){
+
+    if(localStorage.getItem("key")==0){
+
+        localStorage.setItem("key","1");
+
+        document.getElementById("kl").style= "transition: all 0.5s; display:none;";
+
+        document.getElementById("type").style= "width: 110%;transition: all 0.5s; display:flex;";
+
+    }
+
+}
+
+function q1(){        
+
+
+
+    document.getElementById("h2").style= "display:flex;";
+
+    document.getElementById("h1").style= "display:none;";
+
+    document.getElementById("title").style= "display:block;";
+
+    document.getElementById("title").innerText= "جدول ج2";
+
+    document.getElementById("pp").style= "display:flex;";
+
+    document.getElementById("listt").style= "display:none;";
+
+
+
+}
+
+function q2(){        
+
+    document.getElementById("h1").style= "display:flex;";
+
+    document.getElementById("title").style= "display:block;";
+
+    document.getElementById("h2").style= "display:none;";
+
+    document.getElementById("title").innerText= "جدول ج1";
+
+    document.getElementById("pp").style= "display:flex;";
+
+    document.getElementById("listt").style= "display:none;";
+
+}
+
+function start2(){
+
+    document.getElementById("listt").style= "display:flex;";
+
+    document.getElementById("pp").style= "display:none;";
+    document.getElementById("title").style= "display:none;";
+
+}
+
+</script>
+    <!--
+        date :  9/2/2023
+        owner:  mahmoud bahaa mouhamed
+        email:  mbha6367@gmail.com
+        phone:  01013585139
+    -->
+</head>
+<body>
+
+
+    <!--
+        date :  9/2/2023
+        owner:  mahmoud bahaa mouhamed
+        email:  mbha6367@gmail.com
+        phone:  01013585139
+    -->
+
+
+    <div class="container">
+        <div class="header">
+            <img src="https://drive.google.com/file/d/11012j6Iw1ShwsmM1pgkwLdhal10YjhDL/view?usp=drivesdk" alt="">
+            <div class="part">
+            <h6>كليه الزراعه</h6>
+            <h6>قسم الهندسه الزراعيه والنظم الحيويه</h6>
+
+        </div>
+        </div>
+        <h1>جروب ج</h1>
+        <div class="list">
+            <div class="p1">
+                <h1 id="kl" onclick="start()">الجدول</h1>
+                <ul id="type">
+                    <li id="ty" onclick="q1()">ج2</li>
+                    <li id="ty2" onclick="q2()">ج1</li>
+                </ul>
+            </div>
+            <div class="p1">
+                <h1 onclick="start2()">اللي علينا</h1>
+            </div>
+        </div>
+
+        <a class="er" href="https://drive.google.com/folderview?id=10fJv5V1PX7glIYxZdqdLLd8Mjp96pO3E">
+                        <span>2:30 - 4:30</span>
+                        <h4>مدرج 1</h4>
+                    </li>
+                </ul>
+                </div>
+                <div class="t">
+                <ul>
+                    <li>
+                        <h3>سيكشن رسم هندسي 2</h3>
+                        <span>8:30 - 11:30</span>
+                        <h4>صاله الرسم</h4>
+                    </li>
+                    <li>
+                        <h3>سيكشن فيزياء 2</h3>
+                        <span>12:30 - 2:30</span>
+                        <h4>كليه علوم</h4>
+                    </li>
+                    <li>
+                        <h3>سيكشن اساسيات وفسيولوجيا النبات</h3>
+                        <span>2:30 - 4:30</span>
+                        <h4>-</h4>
+                    </li>
+                </ul>
+                </div>
+                    <div class="t">
+                    <ul>
+                        <li>
+                            <h3>محاضره استاتيكا و الديناميكا</h3>
+                            <span>12:30 - 2:30</span>
+                            <h4>مدرج 1</h4>
+                        </li>
+                        <li>
+                            <h3>سيكشن استاتيكا و الديناميكا</h3>
+                            <span>4:30 - 6:30</span>
+                            <h4>مدرج 1</h4>
+                        </li>
+                    </ul>
+                    </div>
+                
+                    <div class="t">
+                        <ul>
+                        <li>
+                            <h3>محاضره اساسيات وفسيولجيا النبات</h3>
+                            <span>10:30 - 12:30</span>
+                            <h4>مدرج 1</h4>
+                        </li>
+                    </ul>
+                    </div>
+                
+            </div>
+
+<!------------------------------------------------------------------------------>
+
+
+
+<!------------------------------------------------------------------------------>
+        
+
+                
+<div class="main" id="h2">
+
+    <div class="t">
+        <ul>
+        
+            <li>
+                <h3>سيكشن التفاضل والتكامل</h3>
+                <span>10:30 - 8:30</span>
+                <h4>مدرج 19</h4>
+            </li>
+            <li>
+                <h3>محاضره التفاضل والتكامل</h3>
+                <span>10:30 - 11:30</span>
+                <h4>مدرج 19</h4>
+            </li>
+            <li>         
+                <h3>محاضره فيزياء (2)</h3>
+                <span>2:30 - 4:30</span>
+                <h4>مدرج 19</h4>
+            </li>
+            <li>
+                <h3>التفكير الناقد</h3>
+                <span>5:30 - 7:30</span>
+                <h4>اون لاين</h4>
+            </li>
+        </ul>
+    </div>
+    <div class="t">
+        <ul>
+
+            <li>
+                <h3>سيكشن هندسه الانتاج</h3>
+                <span>10:30 - 2:30</span>
+                <h4>كليه هندسه</h4>
+            </li>
+        </ul>
+    </div>
+    <div class="t">
+        <ul>
+        <li>
+            <h3>محاضره رسم هندسي 2 / محاضره هندسه الانتاج</h3>
+            <span>9:30 - 10:30</span>
+            <h4>مدرج 1</h4>
+        </li>
+        <li>
+            <h3>محاضره لغه انجليزيه</h3>
+            <span>2:30 - 4:30</span>
+            <h4>مدرج 1</h4>
+        </li>
+    </ul>
+    </div>
+    <div class="t">
+    <ul>
+        <li>
+            <h3>سيكشن رسم هندسي 2</h3>
+            <span>8:30 - 11:30</span>
+            <h4>صاله الرسم</h4>
+        </li>
+        <li>
+            <h3>سيكشن فيزياء 2</h3>
+            <span>12:30 - 2:30</span>
+            <h4>كليه علوم</h4>
+        </li>
+        <li>
+            <h3>سيكشن اساسيات وفسيولوجيا النبات</h3>
+            <span>4:30 - 6:30</span>
+            <h4>-</h4>
+        </li>
+    </ul>
+    </div>
+        <div class="t">
+        <ul>
+            <li>
+                <h3>محاضره استاتيكا و الديناميكا</h3>
+                <span>12:30 - 2:30</span>
+                <h4>مدرج 1</h4>
+            </li>
+            <li>
+                <h3>سيكشن استاتيكا و الديناميكا</h3>
+                <span>4:30 - 6:30</span>
+                <h4>مدرج 1</h4>
+            </li>
+        </ul>
+        </div>
+    
+        <div class="t">
+            <ul>
+            <li>
+                <h3>محاضره اساسيات وفسيولجيا النبات</h3>
+                <span>10:30 - 12:30</span>
+                <h4>مدرج 1</h4>
+            </li>
+        </ul>
+        </div>
+    
+</div>
+
+
+<ul class="ud">
+    <li id="day"> السبت</li>                
+    <li id="day"> الاحد</li>
+    <li id="day"> الاثنين</li>
+    <li id="day"> الثلاثاء</li>
+    <li id="day"> الاربعاء</li>
+    <li id="day"> الحميس</li>
+</ul>
+
+</div>
+
+
+
+<div id="listt">
+    <h5>بدايه الدراسه يوم 11 فبرايرم</h5>
+    <h5>مفيش سكاشن رسم الاسبوع</h5>
+    <h5></h5>
+    <h5></h5>
+    <h5></h5>
+</div>
+
+
+
+
+
+
+
+<div class="footer">
+
+<h1>created by <a href="index.html">@mo bahaa</a></h1>
+
+
+
+</div>
+
+    </div>
+       
+</body>
+</html>
